@@ -1,0 +1,58 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+C1,0402,1,4.7uF,
+"C10, C12, C13, C19, C2, C20, C21, C23, C24, C28, C3, C32, C37, C5, C7, C8",0402,16,0.1uF,
+"C11, C18, C9",0402,3,2.2uF,
+"C14, C15, C34, C35",0805,4,10uF,C440198
+"C16, C36",0402,2,0.1uF,C307331
+"C17, C33, C38",0805,3,47uF,C16780
+C22,0402,1,10nF,
+"C39, C40",0402,2,15pF,C1548 
+"C4, C6",0402,2,15pF,
+Card1,TF-SMD_TF-021B-H265,1,TF PUSH,C498185
+D1,0603,1,YELLOW,
+D2,0603,1,BLUE,
+D3,0603,1,GREEN,
+"D4, D5, D7, D8",D_SOD-323,4,30V 450mA,C2762697
+D6,0603,1,RED,
+J1,Conn_2_Accesory_Bigger,1,Power_3V3,
+J10,Conn_4_Accesory_Bigger,1,Servo 1-2,
+J11,Conn_4_Accesory_Bigger,1,USART6,
+J12,Conn_4_Accesory_Bigger,1,I2C,
+J13,Conn_4_Accesory_Bigger_2x2,1,UART8,
+J14,Conn_3_2.54_SMD,1,Debug,
+J15,Conn_3_Accesory_Bigger,1,RGB,
+J16,CONN-TH_SM08B-SRSS-TB-LF-SN,1,FC-ESC 1 JST,
+J17,Conn_4_Accesory_Bigger,1,UART5,
+J18,CONN-TH_SM08B-SRSS-TB-LF-SN,1,FC-ESC 2 JST,
+J19,Conn_8_Accesory,1,FC-ESC 2 Solder Pads Back,
+J2,Conn_2_Accesory_Bigger,1,Power_5V,
+J20,Conn_4_Accesory_Bigger,1,CAN,
+J21,Conn_2_Accesory_Bigger,1,Power_VBAT,
+J22,Conn_4_Accesory_Bigger,1,Servo5-GPIO1,
+"J23, J24",Conn_8_Accesory,2,FC-ESC 1 Solder Pads Front,
+J25,Conn_3_Accesory_Bigger,1,Analog In,
+J26,Conn_4_Accesory_Bigger,1,UART7,
+J3,Conn_4_Accesory_Bigger,1,USART3,
+J4,Conn_2_Accesory_Bigger,1,Power_4V5,
+J5,Conn_8_Accesory,1,FC-ESC 1 Solder Pads Back,
+J6,Conn_4_Accesory_Bigger_2x2,1,USART2,
+J7,Conn_4_Accesory_Bigger,1,USART1,
+J8,Conn_4_Accesory_Bigger,1,Servo 3-4,
+J9,Conn_4_Accesory_Bigger,1,UART4,
+"L3, L4",IND-SMD_L5.7-W5.2,2,6.8uH,C7461350
+"R10, R18, R6, R7, R8",0402,5,1k,
+"R11, R2",0402,2,5.1k,
+"R12, R13, R14, R15, R3, R4, R5, R9",0402,8,10k,
+R16,0402,1,120R,
+"R17, R20, R21, R22",0402,4,2.2k,
+R23,0402,1,51k,C25794
+"R24, R26",0402,2,10k,C25744 
+R25,0402,1,30.9k,C185428 
+SW1,SW-SMD_TS-1086EV-16,1,SW_SPST,
+U2,LQFP-100_14x14mm_P0.5mm,1,STM32H743VIT6,
+U3,USB-SMD_GT-USB-7010AN,1,GT-USB-7010AN,C963370
+U5,SENSORM-SMD_BMP388,1,BMP388,C779278
+U6,LGA-14_L3.0-W2.5-P0.50-TL,1,ICM-42688-P,C1850418
+U7,HVSON-8-1EP_3x3mm_P0.65mm_EP1.6x2.4mm,1,TJA1051TK-3,C2875699
+"U8, U9",SOT-583-8_L2.1-W1.2-P0.50-LS1.6-BL,2,TPS563300DRLR,C5219249
+Y1,Crystal_SMD_2016-4Pin_2.0x1.6mm,1,16 MHz,C2965579

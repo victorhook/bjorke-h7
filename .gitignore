@@ -4,3 +4,5 @@
 fp-info-cache
 *backups/
 fabrication-toolkit-options.json
+mav.tlog
+mav.tlog.raw

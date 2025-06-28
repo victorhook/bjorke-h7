@@ -44,9 +44,9 @@ Bjorke H7 runs **ArduPilot firmware** with support for:
 ## 🚧 Status
 - [X] PCB rev.A designed and ordered
 - [X] hwdef.dat
-- [ ] PCB rev.A hardware validated
-- [ ] Initial bring-up with ArduPilot firmware
-- [ ] Lua scripting verified
+- [X] PCB rev.A hardware validated
+- [X] Initial bring-up with ArduPilot firmware
+- [X] Lua scripting verified
 - [ ] First takeoff achieved
 - [ ] 1 hour flight time achieved
 - [ ] 5 hours flight time achieved
@@ -63,4 +63,49 @@ Bjorke H7 runs **ArduPilot firmware** with support for:
 - Robotics
 - Developers who need **max control and visibility**
 
+## Flashing
+With a fresh board we must flash the ardupilot bootloader. This requires us to put the mcu in DFU mode, which is done by holding down the boot button while powering on the board.
 
+### Ardupilot + bootloader
+1. Hold down boot button while powering on the board. If you're on linux you can use `dmesg -w` to monitor usb acitivty and you should get something like `Product: DFU in FS Mode` show up.
+2. Open STM32CubeProgrammer and connect with USB
+3. Open the file in `binaries/arducopter_with_bl.hex` and press flash
+4. Powercycle the board and you should see `bjorke-BL` registers itself as USB device at first, then once it leaves bootloader you should get `bjorke` as USB device, and a serial port, eg `/dev/ttyACM0`
+
+### Ardupilot application only
+1. Using the `uploader.py` in AP repo
+    ```
+    python3 Tools/scripts/uploader.py build/bjorke/bin/arducopter.apj
+    ```
+2. Or, after built in repo: 
+    ```
+    ./waf copter --upload
+    ```
+
+### Ardupilot bootloader only
+1. Put into DFU (same as above)
+2. Flash bootloader using either STM32CubeProgrammer, or `dfu-util` with:
+    ```
+    dfu-util -a 0 --dfuse-address 0x08000000 -D binaries/AP_Bootloader.bin -R
+    ```
+
+### Building the code
+Enter the ardupilot repository and run:
+
+#### Bootloader
+```
+./waf configure --board bjorke --bootloader
+./waf clean
+./waf bootloader
+```
+
+Bootloader binaries should be built to `build/bjorke/bin`
+- AP_Bootloader.apj
+- AP_Bootloader.bin
+- AP_Bootloader.hex
+
+#### Application
+```
+./waf configure --board bjorke
+./waf copter
+```

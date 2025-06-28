@@ -93,6 +93,15 @@ With a fresh board we must flash the ardupilot bootloader. This requires us to p
 Enter the ardupilot repository and run:
 
 #### Bootloader
+Either using:
+```
+./Tools/scripts/build_bootloaders.py bjorke
+```
+Creates binaries in `Tools/bootloaders/`:
+- `Tools/bootloaders/bjorke_bl.bin`
+- `Tools/bootloaders/bjorke_bl.hex`
+
+Or, using:
 ```
 ./waf configure --board bjorke --bootloader
 ./waf clean
@@ -105,6 +114,9 @@ Bootloader binaries should be built to `build/bjorke/bin`
 - AP_Bootloader.hex
 
 #### Application
+For the application build we first must have built bootloader with `./Tools/scripts/build_bootloaders.py`.
+This is because AP tooling seems to expect a bootloader binary in `Tools/bootloaders/`.
+
 ```
 ./waf configure --board bjorke
 ./waf copter

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+BINARIES_DIR=$(dirname $0)/../binaries
+BOOTLOADER=${BINARIES_DIR}/AP_Bootloader.bin
+
+dfu-util -a 0 --dfuse-address 0x08000000 -D ${BOOTLOADER} -R
+
+

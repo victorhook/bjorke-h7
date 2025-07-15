@@ -1,0 +1,6 @@
+#!/bin/bash
+
+BINARIES_DIR=$(dirname $0)/../binaries
+export AP_DIR=~/projects/ardupilot
+
+python3 ${AP_DIR}/Tools/scripts/uploader.py ${BINARIES_DIR}/arducopter.apj
